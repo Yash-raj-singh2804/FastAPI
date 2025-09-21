@@ -1,7 +1,8 @@
 from typing import Annotated
 from fastapi.security import OAuth2PasswordBearer
-from Routers import auth_token
+from . import auth_token  # relative import
 from fastapi import Depends
+
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/login")
 
