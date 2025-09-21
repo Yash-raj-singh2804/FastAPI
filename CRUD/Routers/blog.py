@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, Response, HTTPException, status
 from typing import List
 from sqlalchemy.orm import Session
 from CRUD import schemas, database, models
-from Routers.oauth2 import get_current_user          
+from CRUD.Routers.oauth2 import get_current_user          
 
 router = APIRouter(
     prefix="/blogs",   
