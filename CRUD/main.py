@@ -1,10 +1,10 @@
 from fastapi import FastAPI, Depends, status, Response, HTTPException
 from typing import Optional, List
-import schemas, models
-from database import engine, SessionLocal
-from hashing import Hash
+from . import schemas, models
+from .database import engine, SessionLocal
+from .hashing import Hash
 from sqlalchemy.orm import Session
-from Routers import blog, user, authentication
+from .Routers import blog, user, authentication
 
 app = FastAPI(title="Blog API")
 
